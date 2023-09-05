@@ -24,7 +24,7 @@ const Library = ({ isLibraryVisible, setIsLibraryVisible }: LibraryProps) => {
         onClick={() => setIsLibraryVisible(false)}
       />
       <div
-        className={`fixed top-0 left-0 z-20 h-full bg-white lg:w-96 w-64 transition-all duration-200 ease-in-out delay-0  ${
+        className={`overflow-auto fixed top-0 left-0 z-20 h-full bg-white lg:w-96 w-64 transition-all duration-200 ease-in-out delay-0  ${
           isLibraryVisible ? " -translate-x-0" : " -translate-x-full"
         }`}
       >

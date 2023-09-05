@@ -76,9 +76,16 @@ const Player = () => {
     setIsPlaying(true);
   };
 
+  const onVolumeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = event.target.value;
+    if (audioPlayer.current) {
+      audioPlayer.current!.volume = Number(newValue) / 100;
+    }
+  };
+
   return (
     <div className="flex flex-col items-center justify-center w-full gap-12 px-4 py-10 lg:px-0 lg:w-1/2 ">
-      <img src={Songs[song].cover} className="rounded-full " />
+      <img src={Songs[song].cover} className="rounded-2xl " />
       <div className="flex flex-col items-center justify-center gap-2">
         <h2 className="text-2xl font-bold">{Songs[song].title}</h2>
         <h3 className="text-lg text-gray-500">{Songs[song].author}</h3>
@@ -131,6 +138,7 @@ const Player = () => {
           ) : null}
         </span>
       </div>
+      <input type="range" min={0} max={100} onChange={e => onVolumeChange(e)}/>
     </div>
   );
 };
