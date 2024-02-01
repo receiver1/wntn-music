@@ -1,3 +1,13 @@
-# wntn music player #
+# wntn music
+simple music website
 
-МОЕ НАХУЙ
+**Build**
+```
+npm i -D typescript
+npm run build
+
+```
+**Generate songs.ts**
+```
+python generate-songs-ts.py
+```
