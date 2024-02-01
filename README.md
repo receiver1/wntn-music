@@ -5,7 +5,6 @@ simple music website
 ```
 npm i -D typescript
 npm run build
-
 ```
 **Generate songs.ts**
 ```
