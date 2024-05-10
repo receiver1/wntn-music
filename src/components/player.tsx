@@ -131,13 +131,13 @@ const Player = () => {
         </div>
         <div className="flex items-center gap-4 h-full">
           <img src={Songs[song].cover} className="rounded-2xl aspect-square h-full" />
-          <div className="flex flex-col items-start justify-center">
-            <h2 className="text-xl text-black font-bold">{Songs[song].title}</h2>
+          <div className="flex flex-col items-start justify-center w-3/5 overflow-hidden whitespace-nowrap">
+            <h2 className="text-xl text-black font-bold w-full">{Songs[song].title}</h2>
             <h3 className="text-md text-white">{Songs[song].author}</h3>
           </div>
         </div>
       </div>
-      <input type="range" min={0} max={100} onChange={e => onVolumeChange(e)} />
+      <input className='w-16' type="range" min={0} max={100} onChange={e => onVolumeChange(e)} />
     </div>
   </div>;
 };
