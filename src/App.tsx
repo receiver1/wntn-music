@@ -9,6 +9,8 @@ function App() {
       </div>
       <Library />
       <Player />
+      {/* empty space */}
+      <div className='h-32'></div>
     </div>
   );
 }
