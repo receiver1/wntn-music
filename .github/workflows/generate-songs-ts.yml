@@ -1,0 +1,36 @@
+name: Generate songs.ts file
+
+on: 
+  push:
+    branches: [ master ]
+
+permissions: 
+  contents: write
+
+jobs:
+  generation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5.1.0
+        with:
+          python-version: "3.12.3"
+
+      - name: Run Python script
+        run: |
+          python generate-songs-ts.py    
+
+      - name: Add, commit, and push
+        uses: actions4git/add-commit-push@v1.0.0
+
+      - name: Update production branch
+        run: |
+          git checkout production
+          git fetch origin
+          git merge origin/master
+          git push
