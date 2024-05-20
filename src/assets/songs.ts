@@ -1,4 +1,4 @@
-/** This file is generated at 2024-05-18 10:09:45.122479 by generate-songs-ts.py. PLEASE DO NOT EDIT */
+/** This file is generated at 2024-05-20 09:54:33.780721 by generate-songs-ts.py. PLEASE DO NOT EDIT */
 export const Songs = [
   {
     "id": 0,
@@ -138,6 +138,14 @@ export const Songs = [
   },
   {
     "id": 17,
+    "title": "w1nt3r",
+    "author": "neverlane",
+    "cover": "/covers/track-by-neverlane_new.jpg",
+    "decription": "wntn music <3",
+    "song": "/audio/w1nt3r.mp3"
+  },
+  {
+    "id": 18,
     "title": "lua_table",
     "author": "neverlane",
     "cover": "/covers/track-by-neverlane_new.jpg",
@@ -145,7 +153,7 @@ export const Songs = [
     "song": "/audio/lua_table.mp3"
   },
   {
-    "id": 18,
+    "id": 19,
     "title": "blank_68",
     "author": "neverlane",
     "cover": "/covers/track-by-neverlane_new.jpg",
@@ -153,7 +161,7 @@ export const Songs = [
     "song": "/audio/blank_68.mp3"
   },
   {
-    "id": 19,
+    "id": 20,
     "title": "\u0437\u0430\u043f\u0440\u0435\u0442\u0438 \u043c\u043d\u0435 \u043a\u043e\u0434\u0438\u0442\u044c \u043d\u0430 \u043b\u0443\u0430",
     "author": "neverlane",
     "cover": "/covers/track-by-neverlane_new.jpg",
@@ -161,7 +169,7 @@ export const Songs = [
     "song": "/audio/\u0437\u0430\u043f\u0440\u0435\u0442\u0438 \u043c\u043d\u0435 \u043a\u043e\u0434\u0438\u0442\u044c \u043d\u0430 \u043b\u0443\u0430.mp3"
   },
   {
-    "id": 20,
+    "id": 21,
     "title": "dont stop, digger hack",
     "author": "neverlane",
     "cover": "/covers/track-by-neverlane_new.jpg",
@@ -169,7 +177,7 @@ export const Songs = [
     "song": "/audio/dont stop, digger hack.mp3"
   },
   {
-    "id": 21,
+    "id": 22,
     "title": "dont stop digger hack [newtone]",
     "author": "neverlane",
     "cover": "/covers/track-by-neverlane_new.jpg",
@@ -177,7 +185,7 @@ export const Songs = [
     "song": "/audio/dont stop digger hack [newtone].mp3"
   },
   {
-    "id": 22,
+    "id": 23,
     "title": "\u0431\u0443\u0434\u0443 \u044f \u043b\u0443\u0430 \u043f\u0438\u0441\u0430\u0442\u044c",
     "author": "neverlane",
     "cover": "/covers/track-by-neverlane_new.jpg",
@@ -185,7 +193,7 @@ export const Songs = [
     "song": "/audio/\u0431\u0443\u0434\u0443 \u044f \u043b\u0443\u0430 \u043f\u0438\u0441\u0430\u0442\u044c.mp3"
   },
   {
-    "id": 23,
+    "id": 24,
     "title": "\u043c\u043e\u0439 \u043a\u043e\u0442\u0435\u0433 \u0435\u0433\u043e\u0440 \u0434\u0432\u0430\u0447",
     "author": "neverlane",
     "cover": "/covers/track-by-neverlane_new.jpg",
@@ -193,7 +201,7 @@ export const Songs = [
     "song": "/audio/\u043c\u043e\u0439 \u043a\u043e\u0442\u0435\u0433 \u0435\u0433\u043e\u0440 \u0434\u0432\u0430\u0447.mp3"
   },
   {
-    "id": 24,
+    "id": 25,
     "title": "\u043b\u0443\u0430 \u0441\u043a\u0440\u0438\u043f\u0442",
     "author": "neverlane",
     "cover": "/covers/track-by-neverlane_new.jpg",
@@ -201,7 +209,7 @@ export const Songs = [
     "song": "/audio/\u043b\u0443\u0430 \u0441\u043a\u0440\u0438\u043f\u0442.mp3"
   },
   {
-    "id": 25,
+    "id": 26,
     "title": "\u0443\u043c\u043e\u043b\u044f\u044e",
     "author": "neverlane",
     "cover": "/covers/track-by-neverlane_new.jpg",
@@ -209,7 +217,7 @@ export const Songs = [
     "song": "/audio/\u0443\u043c\u043e\u043b\u044f\u044e.mp3"
   },
   {
-    "id": 26,
+    "id": 27,
     "title": "dimiano",
     "author": "neverlane",
     "cover": "/covers/track-by-neverlane_new.jpg",
