@@ -29,29 +29,29 @@ const Player = () => {
   };
 
   useEffect(() => {
-    setIsPlaying(true);
-    if (audioPlayer.current) {
-      audioPlayer.current.onloadedmetadata = () => {
-        const seconds = Math.floor(audioPlayer.current?.duration || 0);
-        setDuration(seconds);
-        playAudio();
-        audioPlayer.current!.addEventListener("canplaythrough", () => {
-          audioPlayer.current!.play();
-        });
-        // if (progressBar.current != null) {
-        //   progressBar.current!.max = seconds.toString();
-        // }
-      };
-    }
+    if (Songs.length > 0) setSong(Songs[0].id);
+    // setIsPlaying(true);
+    // if (audioPlayer.current) {
+    //   audioPlayer.current.onloadedmetadata = () => {
+    //     const seconds = Math.floor(audioPlayer.current?.duration || 0);
+    //     setDuration(seconds);
+    //     playAudio();
+    //     audioPlayer.current!.addEventListener("canplaythrough", () => {
+    //       audioPlayer.current!.play();
+    //     });
+    //   };
+    // }
   }, []);
 
   useEffect(() => {
     if (audioPlayer.current) {
+      playAudio();
       audioPlayer.current.onended = () => {
-        setSong((song) => (song + 1) % Songs.length);
+        const nextIndex = !!song ? song.index+1 % Songs.length : 0;
+        setSong(Songs[nextIndex].id);
       }
     }
-  }, [audioPlayer, setSong, song]);
+  }, [audioPlayer, setSong, song?.id]);
 
   useEffect(() => {
     if (audioPlayer.current) {
@@ -105,11 +105,11 @@ const Player = () => {
   };
 
 
-  return <div className='fixed bottom-0 left-0 w-full'>
+  return song && <div className='fixed bottom-0 left-0 w-full'>
     <div className="relative flex flex-col items-center w-full h-4 gap-2 overflow-hidden">
       <audio
         ref={audioPlayer}
-        src={Songs[song].song}
+        src={song.details.song}
         controls
         onTimeUpdate={handleTimeUpdate}
         className="hidden"
@@ -126,8 +126,8 @@ const Player = () => {
       <div className='w-full flex items-center justify-start gap-4 h-full'>
         <div className="flex items-center justify-center gap-2">
           <span className="flex items-center justify-center w-1/3">
-            {Songs[song].id > 0 ? (
-              <button onClick={() => setSong(song - 1)} aria-label="Back Button">
+            {song.index > 0 ? (
+              <button onClick={() => setSong(Songs[song.index-1].id)} aria-label="Back Button">
                 <GrPrevious className="text-xl" />
               </button>
             ) : null}
@@ -142,9 +142,9 @@ const Player = () => {
             </button>
           </span>
           <span className="flex items-center justify-center w-1/3">
-            {Songs[song].id < Songs.length - 1 ? (
+            {song.index < Songs.length - 1 ? (
               <button
-                onClick={() => setSong(song + 1)}
+                onClick={() => setSong(Songs[song.index+1].id)}
                 aria-label="Forward Button"
               >
                 <GrNext className="text-xl" />
@@ -153,10 +153,10 @@ const Player = () => {
           </span>
         </div>
         <div className="flex items-center gap-4 h-full">
-          <img src={Songs[song].cover} className="rounded-2xl aspect-square h-12" />
+          <img src={song.details.cover} className="rounded-2xl aspect-square h-12" />
           <div className="flex flex-col items-start justify-center overflow-hidden whitespace-nowrap">
-            <h2 className="text-xl text-black font-bold w-full">{Songs[song].title}</h2>
-            <h3 className="text-md text-white">{Songs[song].author}</h3>
+            <h2 className="text-xl text-black font-bold w-full">{song.details.title}</h2>
+            <h3 className="text-md text-white">{song.details.author}</h3>
           </div>
         </div>
       </div>
