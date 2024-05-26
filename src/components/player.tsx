@@ -30,18 +30,20 @@ const Player = () => {
 
   useEffect(() => {
     if (Songs.length > 0) setSong(Songs[0].id);
-    // setIsPlaying(true);
-    // if (audioPlayer.current) {
-    //   audioPlayer.current.onloadedmetadata = () => {
-    //     const seconds = Math.floor(audioPlayer.current?.duration || 0);
-    //     setDuration(seconds);
-    //     playAudio();
-    //     audioPlayer.current!.addEventListener("canplaythrough", () => {
-    //       audioPlayer.current!.play();
-    //     });
-    //   };
-    // }
   }, []);
+
+  useEffect(() => {
+    if (audioPlayer.current) {
+      audioPlayer.current.onloadedmetadata = () => {
+        const seconds = Math.floor(audioPlayer.current?.duration || 0);
+        setDuration(seconds);
+        playAudio();
+        audioPlayer.current!.addEventListener("canplaythrough", () => {
+          audioPlayer.current!.play();
+        });
+      }
+    }
+  }, [audioPlayer]);
 
   useEffect(() => {
     if (audioPlayer.current) {
