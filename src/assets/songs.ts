@@ -1,4 +1,4 @@
-/** This file is generated at 2024-06-04 18:23:13.951110 by generate-songs-ts.py. PLEASE DO NOT EDIT */
+/** This file is generated at 2024-06-08 12:45:48.971507 by generate-songs-ts.py. PLEASE DO NOT EDIT */
 export const Songs = [
   {
     "id": "c8437030cb93cfb4e6fc846e0f99835c2ac71d87a822ab9ecf94488d5f656eb6",
@@ -183,6 +183,14 @@ export const Songs = [
     "cover": "/covers/neverlane/default.jpg",
     "decription": "wntn music <3",
     "song": "/audio/neverlane/dont stop digger hack [newtone].mp3"
+  },
+  {
+    "id": "e9e83fb229339f003a79d0e5c7379df350603c79491c694475e52eae39eec934",
+    "title": "saynolua",
+    "author": "neverlane",
+    "cover": "/covers/neverlane/default.jpg",
+    "decription": "wntn music <3",
+    "song": "/audio/neverlane/saynolua.mp3"
   },
   {
     "id": "7109f32019ff6af3600ec0172a926f2cebc7ce2fe51c76458f0ad7cedfb7b20c",
