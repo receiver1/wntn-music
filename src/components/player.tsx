@@ -1,17 +1,15 @@
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import { BsFillPlayFill, BsPauseFill } from "react-icons/bs";
+import { GrNext, GrPrevious } from "react-icons/gr";
 import { Songs } from "../assets/songs";
 import { usePlayer } from "../hooks/usePlayer";
-import { GrNext } from "react-icons/gr";
-import { GrPrevious } from "react-icons/gr";
-import { BsPauseFill } from "react-icons/bs";
-import { BsFillPlayFill } from "react-icons/bs";
 
 const Player = () => {
   const { song, setSong } = usePlayer();
 
   const [isPlaying, setIsPlaying] = useState(true);
   const [duration, setDuration] = useState<number>(0);
-  const [currnetTime, setCurrentTime] = useState<number>(0);
+  const [currentTime, setCurrentTime] = useState<number>(0);
   const svol = localStorage.getItem('wntn-music-volume');
   const [volume, setVolume] = useState<number>(svol ? +svol : 100);
 
@@ -22,7 +20,6 @@ const Player = () => {
     if (audioPlayer.current) {
       setIsPlaying(true);
       audioPlayer.current.play().catch(() => {
-        // failed because the user didn't interact with the document first
         setIsPlaying(false);
       });
     }
@@ -33,7 +30,6 @@ const Player = () => {
   }, [setSong, song]);
 
   useEffect(() => {
-    console.log("audioPlayer: current", audioPlayer.current);
     if (audioPlayer.current) {
       playAudio();
       audioPlayer.current.volume = volume / 100;
@@ -46,7 +42,7 @@ const Player = () => {
         });
       }
       audioPlayer.current.onended = () => {
-        const nextIndex = song ? song.index+1 % Songs.length : 0;
+        const nextIndex = song ? song.index + 1 % Songs.length : 0;
         setSong(Songs[nextIndex].id);
       }
     }
@@ -54,7 +50,6 @@ const Player = () => {
 
   useEffect(() => {
     if (audioPlayer.current) {
-      console.log("set volume", volume, `before:${audioPlayer.current.volume}`);
       audioPlayer.current.volume = volume / 100;
     }
 
@@ -104,6 +99,16 @@ const Player = () => {
     }
   };
 
+  const handleBackButton = () => {
+    if (song && audioPlayer.current) {
+      if (currentTime > 3) {
+        audioPlayer.current.currentTime = 0
+      }
+      else {
+        setSong(Songs[song.index - 1].id)
+      }
+    }
+  };
 
   return song && <div className='fixed bottom-0 left-0 w-full'>
     <div className="relative flex flex-col items-center w-full h-4 gap-2 overflow-hidden">
@@ -117,7 +122,7 @@ const Player = () => {
       <div className="flex items-center justify-between w-full leading-none select-none px-4" onClick={(e) => {
         setSeekByPercentage(e.clientX / e.currentTarget.clientWidth);
       }}>
-        <div>{calculateTime(currnetTime)}</div>
+        <div>{calculateTime(currentTime)}</div>
         <div ref={progressBar} className="absolute left-0 h-full bg-blue-100 -z-10"></div>
         <div>{calculateTime(duration)}</div>
       </div>
@@ -127,7 +132,7 @@ const Player = () => {
         <div className="flex items-center justify-center gap-2">
           <span className="flex items-center justify-center w-1/3">
             {song.index > 0 ? (
-              <button onClick={() => setSong(Songs[song.index-1].id)} aria-label="Back Button">
+              <button onClick={handleBackButton} aria-label="Back Button">
                 <GrPrevious className="text-xl" />
               </button>
             ) : null}
@@ -144,7 +149,7 @@ const Player = () => {
           <span className="flex items-center justify-center w-1/3">
             {song.index < Songs.length - 1 ? (
               <button
-                onClick={() => setSong(Songs[song.index+1].id)}
+                onClick={() => setSong(Songs[song.index + 1].id)}
                 aria-label="Forward Button"
               >
                 <GrNext className="text-xl" />
