@@ -1,4 +1,4 @@
-/** This file is generated at 2024-08-02 18:42:54.109651 by generate-songs-ts.py. PLEASE DO NOT EDIT */
+/** This file is generated at 2024-08-02 18:55:57.396633 by generate-songs-ts.py. PLEASE DO NOT EDIT */
 export const Songs = [
   {
     "id": "c8437030cb93cfb4e6fc846e0f99835c2ac71d87a822ab9ecf94488d5f656eb6",
@@ -73,20 +73,12 @@ export const Songs = [
     "song": "/audio/neverlane/dimabro.mp3"
   },
   {
-    "id": "56189fc3d65168de7403095bf5d7aac15596264fb71fa90425e46f141d4e77af",
-    "title": "dont stop digger hack [newtone]",
+    "id": "31a62ec4fbe5cbaf2d5ba259215d39d68378f699dfefdd2ae3fa5008cac12674",
+    "title": "dont stop digger hack",
     "author": "neverlane",
     "cover": "/covers/neverlane/default.jpg",
     "decription": "wntn music <3",
-    "song": "/audio/neverlane/dont stop digger hack [newtone].mp3"
-  },
-  {
-    "id": "091099fdab90a1841f4f8c71cea935425ca117a7f47a0931ea99e39ff4f7d394",
-    "title": "dont stop, digger hack",
-    "author": "neverlane",
-    "cover": "/covers/neverlane/default.jpg",
-    "decription": "wntn music <3",
-    "song": "/audio/neverlane/dont stop, digger hack.mp3"
+    "song": "/audio/neverlane/dont stop digger hack.mp3"
   },
   {
     "id": "815abce8d5c20c1fc8bc74370ba0686d957186cc774cde34ba3a1dfa88d61732",
@@ -111,14 +103,6 @@ export const Songs = [
     "cover": "/covers/neverlane/lua_table.jpg",
     "decription": "wntn music <3",
     "song": "/audio/neverlane/lua_table.mp3"
-  },
-  {
-    "id": "b65fb4678f97dd8d18296c7751a5d8af30ec67ac600f9d55562bd84e5e0c5a9c",
-    "title": "luacef",
-    "author": "neverlane",
-    "cover": "/covers/neverlane/default.jpg",
-    "decription": "wntn music <3",
-    "song": "/audio/neverlane/luacef.mp3"
   },
   {
     "id": "e9e83fb229339f003a79d0e5c7379df350603c79491c694475e52eae39eec934",
@@ -159,14 +143,6 @@ export const Songs = [
     "cover": "/covers/neverlane/\u0431\u043b\u0430\u0441\u0442\u0445\u0430\u043a.jpg",
     "decription": "wntn music <3",
     "song": "/audio/neverlane/\u0431\u043b\u0430\u0441\u0442\u0445\u0430\u043a.mp3"
-  },
-  {
-    "id": "7109f32019ff6af3600ec0172a926f2cebc7ce2fe51c76458f0ad7cedfb7b20c",
-    "title": "\u0431\u0443\u0434\u0443 \u044f \u043b\u0443\u0430 \u043f\u0438\u0441\u0430\u0442\u044c",
-    "author": "neverlane",
-    "cover": "/covers/neverlane/default.jpg",
-    "decription": "wntn music <3",
-    "song": "/audio/neverlane/\u0431\u0443\u0434\u0443 \u044f \u043b\u0443\u0430 \u043f\u0438\u0441\u0430\u0442\u044c.mp3"
   },
   {
     "id": "447d877c813a3e41af707317fad0cc84f3e22df0f82c56f1f8a8879d202f5fe0",
