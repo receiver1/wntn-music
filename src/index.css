@@ -13,3 +13,12 @@ body {
     box-sizing: border-box;
     font-family: Hauora;
 }
+
+input[type="range"]::-webkit-slider-thumb {
+    @apply border-0 outline-0 size-4 rounded-full appearance-none bg-gray-600 dark:bg-white;
+    
+}
+
+input[type="range"]::-moz-range-thumb {
+    @apply border-0 outline-0 size-4 rounded-full appearance-none bg-gray-600 dark:bg-white;
+}

@@ -171,7 +171,10 @@ const Player = () => {
             </div>
           </div>
         </div>
-        <input className="w-16" type="range" value={volume} min={0} max={100} onChange={e => onVolumeChange(e)} />
+        {/* <div className="w-16">
+          <input id="minmax-range" type="range" min="0" max="10" className="w-full h-2 bg-red-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"></input>
+        </div> */}
+        <input className="w-full mb-4 md:mb-0 md:w-24 h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" type="range" value={volume} min={0} max={100} onChange={e => onVolumeChange(e)} />
       </div>
     </div>
   </div>;
