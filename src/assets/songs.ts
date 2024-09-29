@@ -1,4 +1,4 @@
-/** This file is generated at 2024-09-08 11:22:39.415214 by generate-songs-ts.py. PLEASE DO NOT EDIT */
+/** This file is generated at 2024-09-29 10:34:19.764309 by generate-songs-ts.py. PLEASE DO NOT EDIT */
 export const Songs = [
   {
     "id": "c8437030cb93cfb4e6fc846e0f99835c2ac71d87a822ab9ecf94488d5f656eb6",
@@ -55,6 +55,14 @@ export const Songs = [
     "cover": "/covers/neverlane/copypaste.jpg",
     "decription": "wntn music <3",
     "song": "/audio/neverlane/copypaste.mp3"
+  },
+  {
+    "id": "ae6b51bbae1979eb53a7bb230302467e25b8b04dcfc4c68aa21645128d1493e8",
+    "title": "cs2",
+    "author": "neverlane",
+    "cover": "/covers/neverlane/default.jpg",
+    "decription": "wntn music <3",
+    "song": "/audio/neverlane/cs2.mp3"
   },
   {
     "id": "bd7c09407a4b2545e97f93ead1943957fff25f5d19b4558f569a1bab38f1cee8",
