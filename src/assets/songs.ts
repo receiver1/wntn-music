@@ -1,4 +1,4 @@
-/** This file is generated at 2024-10-24 10:18:02.424223 by generate-songs-ts.py. PLEASE DO NOT EDIT */
+/** This file is generated at 2024-10-24 14:19:14.332411 by generate-songs-ts.py. PLEASE DO NOT EDIT */
 export const Songs = [
   {
     "id": "c8437030cb93cfb4e6fc846e0f99835c2ac71d87a822ab9ecf94488d5f656eb6",
@@ -167,6 +167,14 @@ export const Songs = [
     "cover": "/covers/neverlane/default.jpg",
     "decription": "wntn music <3",
     "song": "/audio/neverlane/zaplakala.mp3"
+  },
+  {
+    "id": "2826d8f1b35f54c3170470a88daf753461f6ccc4ad64dcf582089d09d03f2b9a",
+    "title": "zaplakala_full",
+    "author": "neverlane",
+    "cover": "/covers/neverlane/default.jpg",
+    "decription": "wntn music <3",
+    "song": "/audio/neverlane/zaplakala_full.mp3"
   },
   {
     "id": "ccfe0c555c980630f95535dd0933c2b5b22ecc2c12b715fca1c711721c58e704",
