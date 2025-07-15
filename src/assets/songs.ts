@@ -1,5 +1,13 @@
-/** This file is generated at 2025-07-01 15:31:56.182272 by generate-songs-ts.py. PLEASE DO NOT EDIT */
+/** This file is generated at 2025-07-15 21:11:13.464039 by generate-songs-ts.py. PLEASE DO NOT EDIT */
 export const Songs = [
+  {
+    "id": "dc3f4385eb8679b1f6fd0e53450b2965eb7dde4ff10e106896746fcb65d6dbb8",
+    "title": "000",
+    "author": "roulse420",
+    "cover": "/covers/default.jpg",
+    "decription": "wntn music <3",
+    "song": "/audio/roulse420/000.mp3"
+  },
   {
     "id": "c8437030cb93cfb4e6fc846e0f99835c2ac71d87a822ab9ecf94488d5f656eb6",
     "title": "5\u0433",
