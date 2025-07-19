@@ -27,7 +27,7 @@ def main():
                 cover = os.path.join("covers", artist, "default.jpg")
             result.append(
                 {
-                    "id": sha256(bytes(f"{artist} - {track}".encode())).hexdigest(),
+                    "id": sha256(bytes(" - ".join((artist, track)).encode())).hexdigest(),
                     "title": track[0:-4].replace("-", ""),
                     "author": artist,
                     "cover": "/" + cover.replace("\\", "/"),

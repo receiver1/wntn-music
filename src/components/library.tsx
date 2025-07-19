@@ -1,6 +1,7 @@
 import { usePlayer } from "../hooks/usePlayer";
 import { Songs } from "../assets/songs";
 import { GrCopy } from "react-icons/gr";
+import { slugifySong } from '../utils/sluggify';
 
 const Library = () => {
   const { song, setSong } = usePlayer();
@@ -29,9 +30,9 @@ const Library = () => {
                 </span>
               </div>
               <div>
-                <button onClick={(e) => {
+                <button type="button" onClick={(e) => {
                   e.stopPropagation();
-                  navigator.clipboard.writeText(`${location.origin}/p/${item.id}`);
+                  navigator.clipboard.writeText(`${location.origin}/p/${slugifySong(item)}`);
                   alert("copied to clipboard");
                 }}>
                   <GrCopy className="stroke-black dark:stroke-white" />  

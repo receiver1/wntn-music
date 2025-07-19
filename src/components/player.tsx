@@ -3,6 +3,8 @@ import { BsFillPlayFill, BsPauseFill } from "react-icons/bs";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { Songs } from "../assets/songs";
 import { usePlayer } from "../hooks/usePlayer";
+import { Song } from '../types';
+import { slugifyRussian, slugifySong } from '../utils/sluggify';
 
 const Player = () => {
   const { song, setSong } = usePlayer();
@@ -27,9 +29,28 @@ const Player = () => {
 
   useEffect(() => {
     if (Songs.length > 0 && !song) {
-      const sharedSongId = location.pathname.startsWith("/p/") ? location.pathname.split("/p/")[1] : null;
-      const id = sharedSongId && Songs.findIndex((s) => s.id === sharedSongId) !== -1 ? sharedSongId : Songs[0].id;
-      setSong(id);
+      // play by /p endpoint
+      if (location.pathname.startsWith("/p/")) {
+        const reNewSlug = /^(?<hash>[0-9a-f]{6})(?:-(?<slug_en>.+)|)$/
+        const slugOrId = location.pathname.split("/p/")[1]
+        let id = Songs[0].id;
+        
+        // old version
+        if (/^[0-9a-f]{64}$/.test(slugOrId) && Songs.findIndex((s) => s.id === slugOrId) !== -1) {
+          id = slugOrId
+        } else if (reNewSlug.test(slugOrId)) {
+          const params = reNewSlug.exec(slugOrId)!.groups as {
+            hash: string;
+            slug?: string
+          }
+
+          
+          
+          const result = Songs.find((v) => v.id.startsWith(params.hash) && (params.slug ? slugifySong(v) === slugOrId : true));
+          if (result) id = result.id;
+        }
+        setSong(id);
+      }
     }
   }, [setSong, song]);
 
@@ -42,7 +63,7 @@ const Player = () => {
         setDuration(seconds);
         playAudio();
         audioPlayer.current!.addEventListener("canplaythrough", () => {
-          audioPlayer.current!.play();
+          audioPlayer.current!.play().catch((err) => console.error(err));
         });
       };
       audioPlayer.current.onended = () => {
