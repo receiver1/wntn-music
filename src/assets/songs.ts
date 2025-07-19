@@ -1,4 +1,4 @@
-/** This file is generated at 2025-07-17 15:54:38.639782 by generate-songs-ts.py. PLEASE DO NOT EDIT */
+/** This file is generated at 2025-07-19 09:06:16.912380 by generate-songs-ts.py. PLEASE DO NOT EDIT */
 export const Songs = [
   {
     "id": "dc3f4385eb8679b1f6fd0e53450b2965eb7dde4ff10e106896746fcb65d6dbb8",
@@ -103,6 +103,14 @@ export const Songs = [
     "cover": "/covers/neverlane/default.jpg",
     "decription": "wntn music <3",
     "song": "/audio/neverlane/dont stop digger hack.mp3"
+  },
+  {
+    "id": "cf0aaacb197077a9b0a249a56db1fc8400afc02a1646e4e27a6d1bca2e0ce5ab",
+    "title": "droppetprojects",
+    "author": "neverlane",
+    "cover": "/covers/neverlane/default.jpg",
+    "decription": "wntn music <3",
+    "song": "/audio/neverlane/droppetprojects.mp3"
   },
   {
     "id": "815abce8d5c20c1fc8bc74370ba0686d957186cc774cde34ba3a1dfa88d61732",
