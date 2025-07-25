@@ -1,4 +1,4 @@
-/** This file is generated at 2025-07-19 11:09:13.277189 by generate-songs-ts.py. PLEASE DO NOT EDIT */
+/** This file is generated at 2025-07-25 17:42:41.466101 by generate-songs-ts.py. PLEASE DO NOT EDIT */
 export const Songs = [
   {
     "id": "dc3f4385eb8679b1f6fd0e53450b2965eb7dde4ff10e106896746fcb65d6dbb8",
@@ -127,6 +127,14 @@ export const Songs = [
     "cover": "/covers/roulse420/got them.jpg",
     "decription": "wntn music <3",
     "song": "/audio/roulse420/got them.mp3"
+  },
+  {
+    "id": "844d5290965bc6509fd86626df1010963764077d88681ee11664f05f2b7e0dfb",
+    "title": "hi everyday",
+    "author": "roulse420",
+    "cover": "/covers/default.jpg",
+    "decription": "wntn music <3",
+    "song": "/audio/roulse420/hi everyday.mp3"
   },
   {
     "id": "92fe98631e8ae2f57a486b60c75e78c9f9cfceb1f0782a90cbd074f9ad74c5c9",
