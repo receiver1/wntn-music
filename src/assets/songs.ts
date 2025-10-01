@@ -1,13 +1,5 @@
-/** This file is generated at 2025-10-01 13:00:42.868511 by generate-songs-ts.py. PLEASE DO NOT EDIT */
+/** This file is generated at 2025-10-01 13:54:28.759066 by generate-songs-ts.py. PLEASE DO NOT EDIT */
 export const Songs = [
-  {
-    "id": "bb9491a25d1c9d7d341bdb3f58dbdacdfa4ae40fb0bb7551a888d35c620b77e3",
-    "title": "#neverlanewillfixitall",
-    "author": "neverlane",
-    "cover": "/covers/neverlane/default.jpg",
-    "decription": "wntn music <3",
-    "song": "/audio/neverlane/#neverlanewillfixitall.mp3"
-  },
   {
     "id": "dc3f4385eb8679b1f6fd0e53450b2965eb7dde4ff10e106896746fcb65d6dbb8",
     "title": "000",
@@ -159,6 +151,14 @@ export const Songs = [
     "cover": "/covers/neverlane/lua_table.jpg",
     "decription": "wntn music <3",
     "song": "/audio/neverlane/lua_table.mp3"
+  },
+  {
+    "id": "dcd416b9d42aa877eb65aba5a1eb0caa67dd156d79b8b17ba6e30c2aca6c5288",
+    "title": "neverlanewillfixitall",
+    "author": "neverlane",
+    "cover": "/covers/neverlane/default.jpg",
+    "decription": "wntn music <3",
+    "song": "/audio/neverlane/neverlanewillfixitall.mp3"
   },
   {
     "id": "e9e83fb229339f003a79d0e5c7379df350603c79491c694475e52eae39eec934",
